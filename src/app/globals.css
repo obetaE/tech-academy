@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap');
+
+:root {
+  /* Main palette */
+  --mist-rose: #F5DDDD;
+  --ash-lavender: #C2B2B4;
+  --vintage-plum: #6B4E71;
+  --deep-slate: #3A4454;
+  --dusk-blue: #53687E;
+  
+  /* Complementary colors */
+  --peach-blush: #F9C7A8;
+  --charcoal: #1D232D;
+  --light-ivory: #FFF8F8;
+  
+  /* Fonts */
+  --heading-font: 'Cormorant Garamond', serif;
+  --body-font: 'Nunito Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--light-ivory);
+  color: var(--deep-slate);
+  font-family: var(--body-font);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--charcoal);
+}
+
+a {
+  color: var(--vintage-plum);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--dusk-blue);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-family: var(--body-font);
+}
+
+.btn-primary {
+  background: var(--vintage-plum);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--dusk-blue);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(107, 78, 113, 0.3);
+}
+
+.btn-secondary {
+  background: var(--dusk-blue);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: var(--vintage-plum);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(83, 104, 126, 0.3);
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--vintage-plum);
+}

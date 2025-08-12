@@ -1,0 +1,210 @@
+/* styles/Courses.module.css */
+.courses {
+  padding: 5rem 0;
+  background: var(--light-ivory);
+  position: relative;
+  overflow: hidden;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.subtitle {
+  color: var(--dusk-blue);
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.1rem;
+}
+
+.viewAll {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border: 2px solid var(--vintage-plum);
+  color: var(--vintage-plum);
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.viewAll:hover {
+  background: var(--vintage-plum);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(107, 78, 113, 0.3);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(58, 68, 84, 0.1);
+  transition: all 0.4s ease;
+  border-top: 4px solid var(--card-accent);
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(58, 68, 84, 0.15);
+}
+
+.popularBadge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--peach-blush);
+  color: var(--deep-slate);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cardHeader {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.cardIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.cardTitle {
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+  color: var(--deep-slate);
+}
+
+.cardInstructor {
+  color: var(--dusk-blue);
+  font-size: 0.95rem;
+}
+
+.cardDescription {
+  color: var(--deep-slate);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.cardMeta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(194, 178, 180, 0.3);
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--dusk-blue);
+  font-weight: 600;
+}
+
+.star {
+  color: var(--peach-blush);
+}
+
+.details {
+  display: flex;
+  gap: 1rem;
+  color: var(--deep-slate);
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.details > div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.level {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.level[data-level="Beginner"] {
+  background: rgba(83, 104, 126, 0.15);
+  color: var(--dusk-blue);
+}
+
+.level[data-level="Intermediate"] {
+  background: rgba(107, 78, 113, 0.15);
+  color: var(--vintage-plum);
+}
+
+.level[data-level="Advanced"] {
+  background: rgba(58, 68, 84, 0.15);
+  color: var(--deep-slate);
+}
+
+.price {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--deep-slate);
+}
+
+.enrollBtn {
+  display: block;
+  text-align: center;
+  background: var(--dusk-blue);
+  color: white;
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.enrollBtn:hover {
+  background: var(--vintage-plum);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(83, 104, 126, 0.3);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .card {
+    padding: 1.5rem;
+  }
+}

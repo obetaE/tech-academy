@@ -1,0 +1,25 @@
+.mapContainer {
+  margin-top: 3rem;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  color: var(--deep-slate);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--peach-blush);
+}
+
+.map {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(58, 68, 84, 0.1);
+}
+
+.mapNote {
+  margin-top: 1rem;
+  color: var(--dusk-blue);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}

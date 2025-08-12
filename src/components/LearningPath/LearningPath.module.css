@@ -1,0 +1,148 @@
+/* components/LearningPath/LearningPath.module.css */
+.learningPath {
+  padding: 5rem 0;
+  background: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  color: var(--deep-slate);
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--vintage-plum);
+}
+
+.sectionSubtitle {
+  color: var(--dusk-blue);
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(58, 68, 84, 0.1);
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--card-accent);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(58, 68, 84, 0.2);
+}
+
+.pathHeader {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(194, 178, 180, 0.3);
+}
+
+.title {
+  font-size: 1.6rem;
+  color: var(--deep-slate);
+  margin-bottom: 0.5rem;
+}
+
+.pathInfo {
+  display: flex;
+  gap: 1.5rem;
+  color: var(--dusk-blue);
+  font-weight: 500;
+}
+
+.description {
+  color: var(--dusk-blue);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.progressContainer {
+  height: 8px;
+  background: rgba(194, 178, 180, 0.3);
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.progressBar {
+  height: 100%;
+  background: var(--card-accent);
+  border-radius: 4px;
+}
+
+.pathStats {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.statNumber {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--card-accent);
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: var(--deep-slate);
+}
+
+.exploreBtn {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  background: var(--dusk-blue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.exploreBtn:hover {
+  background: var(--vintage-plum);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(83, 104, 126, 0.3);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

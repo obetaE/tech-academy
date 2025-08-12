@@ -1,0 +1,132 @@
+.navbar {
+  background-color: var(--light-ivory);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(58, 68, 84, 0.1);
+  padding: 1rem 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.logo {
+  font-family: var(--heading-font);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.logoMain {
+  color: var(--deep-slate);
+}
+
+.logoAccent {
+  color: var(--vintage-plum);
+}
+
+.navLinks {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.navItem {
+  color: var(--deep-slate);
+  font-weight: 600;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.navItem::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--vintage-plum);
+  transition: width 0.3s ease;
+}
+
+.navItem:hover::after {
+  width: 100%;
+}
+
+.active::after{
+    content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--vintage-plum);
+  transition: width 0.3s ease;
+}
+
+.authItem {
+  background: var(--dusk-blue);
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.authItem:hover {
+  background: var(--vintage-plum);
+  transform: translateY(-2px);
+}
+
+.authItem:last-child {
+  background: var(--vintage-plum);
+}
+
+.authItem:last-child:hover {
+  background: var(--dusk-blue);
+}
+
+.menuToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--vintage-plum);
+  display: none;
+}
+
+.mobileMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--light-ivory);
+  box-shadow: 0 5px 15px rgba(58, 68, 84, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.mobileItem {
+  padding: 0.8rem 0;
+  color: var(--deep-slate);
+  font-weight: 600;
+  border-bottom: 1px solid rgba(194, 178, 180, 0.3);
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+  
+  .menuToggle {
+    display: block;
+  }
+}

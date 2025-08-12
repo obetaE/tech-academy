@@ -1,0 +1,76 @@
+.contactInfo {
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  color: var(--deep-slate);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--dusk-blue);
+}
+
+.infoItem {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(107, 78, 113, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--vintage-plum);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 1.2rem;
+  color: var(--deep-slate);
+  margin-bottom: 0.5rem;
+}
+
+.text {
+  color: var(--dusk-blue);
+  margin-bottom: 0.3rem;
+  line-height: 1.6;
+}
+
+.socialSection {
+  margin-top: 2rem;
+}
+
+.socialTitle {
+  font-size: 1.2rem;
+  color: var(--deep-slate);
+  margin-bottom: 1rem;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialLink {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--light-ivory);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dusk-blue);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+  background: var(--vintage-plum);
+  color: white;
+  transform: translateY(-3px);
+}
