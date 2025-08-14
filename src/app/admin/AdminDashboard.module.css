@@ -1,0 +1,498 @@
+.adminContainer {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding-top: 80px;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: var(--deep-slate);
+  color: white;
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0 1.5rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo span {
+  color: var(--vintage-plum);
+}
+
+.sidebarMenu {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menuItem:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+.menuItem.active {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-left: 4px solid var(--vintage-plum);
+}
+
+.menuIcon {
+  margin-right: 1rem;
+  font-size: 1.1rem;
+}
+
+.quickActions {
+  padding: 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 1rem;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.actionButton:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.actionIcon {
+  margin-right: 0.8rem;
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+.searchBar input {
+  padding: 0.6rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 30px;
+  width: 300px;
+  font-size: 0.95rem;
+}
+
+.adminControls {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.notificationIcon {
+  position: relative;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--deep-slate);
+}
+
+.notificationBadge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: var(--vintage-plum);
+  color: white;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notificationDropdown {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 350px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  z-index: 100;
+  display: none;
+}
+
+.notificationIcon:hover .notificationDropdown {
+  display: block;
+}
+
+.notificationHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.notificationHeader h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.notificationHeader button {
+  background: none;
+  border: none;
+  color: var(--vintage-plum);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.notificationItem {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+}
+
+.notificationItem.unread {
+  background: rgba(245, 221, 221, 0.1);
+  margin: 0 -1rem;
+  padding: 0.8rem 1rem;
+}
+
+.notificationText {
+  font-size: 0.95rem;
+}
+
+.notificationTime {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 0.3rem;
+}
+
+.noNotifications {
+  padding: 1rem 0;
+  text-align: center;
+  color: #888;
+}
+
+.adminProfile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.profileIcon {
+  font-size: 1.4rem;
+  color: var(--dusk-blue);
+}
+
+.logoutButton {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--deep-slate);
+  cursor: pointer;
+}
+
+.dashboardContent, 
+.usersContent, 
+.coursesContent {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.pageTitle {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--deep-slate);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(58, 68, 84, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.statIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.statContent {
+  flex: 1;
+}
+
+.statValue {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--deep-slate);
+}
+
+.statLabel {
+  color: var(--dusk-blue);
+  font-size: 0.95rem;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.recentUsers, .recentCourses {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(58, 68, 84, 0.1);
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.sectionHeader h2 {
+  font-size: 1.3rem;
+  color: var(--deep-slate);
+  margin: 0;
+}
+
+.sectionHeader button {
+  background: none;
+  border: none;
+  color: var(--vintage-plum);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.usersTable, .coursesTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.usersTable th, .coursesTable th {
+  text-align: left;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #eee;
+  font-weight: 600;
+  color: var(--dusk-blue);
+}
+
+.usersTable td, .coursesTable td {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+.roleBadge {
+  background: rgba(83, 104, 126, 0.1);
+  color: var(--dusk-blue);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.roleBadge.admin {
+  background: rgba(107, 78, 113, 0.1);
+  color: var(--vintage-plum);
+}
+
+.actionBtn {
+  background: rgba(107, 78, 113, 0.1);
+  color: var(--vintage-plum);
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.actionBtn:hover {
+  background: rgba(107, 78, 113, 0.2);
+}
+
+/* Users and Courses specific styles */
+.usersContent, .coursesContent {
+  padding: 2rem;
+}
+
+.sectionHeader {
+  margin-bottom: 1.5rem;
+}
+
+.createButton {
+  background: var(--vintage-plum);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.createButton:hover {
+  background: var(--dusk-blue);
+}
+
+.searchFilters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 30px;
+  font-size: 0.95rem;
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filterGroup label {
+  font-size: 0.95rem;
+  color: var(--dusk-blue);
+}
+
+.filterSelect {
+  padding: 0.6rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 30px;
+  background: white;
+}
+
+.fullTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(58, 68, 84, 0.1);
+}
+
+.fullTable th {
+  text-align: left;
+  padding: 1rem;
+  background: #f8f9fa;
+  font-weight: 600;
+  color: var(--dusk-blue);
+  border-bottom: 1px solid #eee;
+}
+
+.fullTable td {
+  padding: 1rem;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+.statusBadge {
+  background: rgba(67, 160, 71, 0.1);
+  color: #2e7d32;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.deleteBtn {
+  background: rgba(244, 67, 54, 0.1);
+  color: #f44336;
+  margin-left: 0.5rem;
+}
+
+.deleteBtn:hover {
+  background: rgba(244, 67, 54, 0.2);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.pageButton {
+  padding: 0.5rem 1rem;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pageButton.active {
+  background: var(--vintage-plum);
+  color: white;
+  border-color: var(--vintage-plum);
+}
+
+.adminContainer {
+  position: relative;
+}
+
+.modalOverlay {
+  z-index: 2000; 
+}

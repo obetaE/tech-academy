@@ -1,0 +1,107 @@
+.card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(194, 178, 180, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(107, 78, 113, 0.2);
+}
+
+.popularTag {
+  position: absolute;
+  top: 15px;
+  right: -30px;
+  padding: 0.3rem 3rem;
+  transform: rotate(45deg);
+  color: white;
+  font-weight: 700;
+  font-size: 0.8rem;
+  z-index: 10;
+}
+
+.cardHeader {
+  padding: 1.8rem;
+  color: white;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.cardInstructor {
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+.cardBody {
+  padding: 1.8rem;
+}
+
+.cardDescription {
+  color: var(--deep-slate);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.cardMeta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--deep-slate);
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.metaIcon {
+  color: var(--vintage-plum);
+}
+
+.levelBadge {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.8rem;
+  border-top: 1px solid rgba(194, 178, 180, 0.3);
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--deep-slate);
+}
+
+.enrollBtn {
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  font-family: var(--body-font);
+}
+
+.enrollBtn:hover {
+  transform: scale(1.05);
+}

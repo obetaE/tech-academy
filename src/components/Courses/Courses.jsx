@@ -1,6 +1,8 @@
+"use client"
 import Link from 'next/link';
 import { FaStar, FaClock, FaLayerGroup, FaUserGraduate } from 'react-icons/fa';
 import styles from "./Courses.module.css";
+import { useRouter } from "next/navigation"
 
 const courses = [
   {
@@ -90,6 +92,11 @@ const courses = [
 ];
 
 export default function Courses() {
+    const router = useRouter();
+    const handleEnrollClick = (courseId) => {
+    router.push(`/courses/${courseId}/payment`);
+  };
+  
   return (
     <section className={styles.courses}>
       <div className="container">
@@ -155,9 +162,9 @@ export default function Courses() {
                 <div className={styles.price}>{course.price}</div>
               </div>
               
-              <Link href={`/courses/${course.id}`} className={styles.enrollBtn}>
+              <button href={`/courses/${course.id}`} className={styles.enrollBtn} onClick={() => handleEnrollClick(course.id)}>
                 Enroll Now
-              </Link>
+              </button>
             </div>
           ))}
         </div>

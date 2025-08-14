@@ -84,9 +84,9 @@ export default function CourseCategories() {
         
         <div className={styles.grid}>
           {categories.map((category) => (
-            <Link 
+            <span 
               key={category.id} 
-              href={`/courses/category/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
+              href={`/category/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
               className={styles.card}
               style={{ '--card-accent': category.color }}
             >
@@ -98,7 +98,7 @@ export default function CourseCategories() {
               </div>
               <h3 className={styles.name}>{category.name}</h3>
               <p className={styles.coursesCount}>{category.courses} courses</p>
-            </Link>
+            </span>
           ))}
         </div>
       </div>

@@ -1,0 +1,137 @@
+.sidebar {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(58, 68, 84, 0.1);
+  overflow: hidden;
+}
+
+.header {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(194, 178, 180, 0.3);
+}
+
+.title {
+  font-size: 1.4rem;
+  color: var(--deep-slate);
+  margin: 0;
+}
+
+.modules {
+  padding: 0.5rem;
+}
+
+.module {
+  margin-bottom: 1rem;
+}
+
+.moduleHeader {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem;
+  border-radius: 8px;
+  background: rgba(245, 221, 221, 0.2);
+}
+
+.moduleHeader.completed {
+  background: rgba(67, 160, 71, 0.1);
+}
+
+.moduleIcon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--vintage-plum);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 0.8rem;
+  flex-shrink: 0;
+}
+
+.moduleHeader.completed .moduleIcon {
+  background: #43a047;
+}
+
+.moduleTitle {
+  font-size: 1.1rem;
+  color: var(--deep-slate);
+  margin: 0;
+}
+
+.topics {
+  padding: 0.5rem 0 0.5rem 2.5rem;
+}
+
+.topic {
+  display: flex;
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin-bottom: 0.3rem;
+  text-decoration: none;
+  color: var(--dusk-blue);
+  transition: all 0.2s ease;
+}
+
+.topic:hover {
+  background: rgba(245, 221, 221, 0.2);
+}
+
+.topic.active {
+  background: rgba(107, 78, 113, 0.1);
+  color: var(--vintage-plum);
+  font-weight: 600;
+}
+
+.topicStatus {
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+}
+
+.completedIcon {
+  color: #43a047;
+  font-weight: bold;
+}
+
+.incompleteIcon {
+  color: var(--ash-lavender);
+}
+
+.topicTitle {
+  flex: 1;
+}
+
+.resources {
+  padding: 1.5rem;
+  border-top: 1px solid rgba(194, 178, 180, 0.3);
+}
+
+.resourcesTitle {
+  font-size: 1.2rem;
+  color: var(--deep-slate);
+  margin-bottom: 1rem;
+}
+
+.resourcesList {
+  list-style: none;
+  padding: 0;
+}
+
+.resourceItem {
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  background: rgba(245, 221, 221, 0.1);
+  color: var(--dusk-blue);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.resourceItem:hover {
+  background: rgba(245, 221, 221, 0.2);
+  color: var(--vintage-plum);
+}

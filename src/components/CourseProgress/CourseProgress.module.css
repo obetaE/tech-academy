@@ -1,0 +1,38 @@
+.progressContainer {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(58, 68, 84, 0.1);
+  margin-bottom: 2rem;
+}
+
+.progressHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.moduleTitle {
+  font-size: 1.3rem;
+  color: var(--deep-slate);
+}
+
+.progressText {
+  color: var(--vintage-plum);
+  font-weight: 600;
+}
+
+.progressBar {
+  height: 10px;
+  background: rgba(194, 178, 180, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--vintage-plum);
+  border-radius: 5px;
+  transition: width 0.5s ease;
+}

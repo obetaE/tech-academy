@@ -1,0 +1,93 @@
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--mist-rose) 0%, var(--light-ivory) 100%);
+  padding: 2rem;
+}
+
+.loader {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.orb {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--vintage-plum);
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.orb:nth-child(2) {
+  background: var(--dusk-blue);
+  animation-delay: 0.2s;
+}
+
+.orb:nth-child(3) {
+  background: var(--peach-blush);
+  animation-delay: 0.4s;
+}
+
+.orb:nth-child(4) {
+  background: var(--deep-slate);
+  animation-delay: 0.6s;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.8);
+    opacity: 0.7;
+  }
+}
+
+.textContainer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--deep-slate);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--dusk-blue);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.tipContainer {
+  position: absolute;
+  bottom: 2rem;
+  text-align: center;
+}
+
+.tip {
+  font-size: 0.95rem;
+  color: var(--vintage-plum);
+  font-style: italic;
+  padding: 0.5rem 1rem;
+  background: rgba(107, 78, 113, 0.1);
+  border-radius: 8px;
+}
+
+/* Animation for the tip */
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+.tip {
+  animation: fadeInOut 3s infinite;
+}

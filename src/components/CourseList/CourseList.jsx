@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import { FaStar, FaClock, FaLayerGroup, FaUserGraduate } from 'react-icons/fa';
+import { useRouter } from 'next/navigation';
 import styles from './CourseList.module.css';
 
 const courses = [
@@ -129,6 +130,7 @@ const courses = [
 export default function CourseList() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [filteredCourses, setFilteredCourses] = useState(courses);
+    const router = useRouter();
   
   const categories = ["All", ...new Set(courses.map(course => course.category))];
   
@@ -139,6 +141,10 @@ export default function CourseList() {
     } else {
       setFilteredCourses(courses.filter(course => course.category === category));
     }
+  };
+
+  const handleEnrollClick = (courseId) => {
+    router.push(`/courses/${courseId}/payment`);
   };
   
   return (
@@ -215,7 +221,7 @@ export default function CourseList() {
                 <div className={styles.price}>{course.price}</div>
               </div>
               
-              <button className={styles.enrollBtn}>
+              <button className={styles.enrollBtn} onClick={() => handleEnrollClick(course.id)} >
                 Enroll Now
               </button>
             </div>

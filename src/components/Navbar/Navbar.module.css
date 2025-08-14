@@ -82,8 +82,8 @@
 }
 
 .authItem:hover {
-  background: var(--vintage-plum);
-  transform: translateY(-2px);
+  background: var(--ash-lavender);
+  color: white;
 }
 
 .authItem:last-child {
@@ -91,7 +91,7 @@
 }
 
 .authItem:last-child:hover {
-  background: var(--dusk-blue);
+  background: var(--ash-lavender);
 }
 
 .menuToggle {

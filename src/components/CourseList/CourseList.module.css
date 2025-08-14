@@ -233,6 +233,21 @@
   box-shadow: 0 5px 15px rgba(83, 104, 126, 0.3);
 }
 
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: var(--dusk-blue);
+  font-size: 1.2rem;
+}
+
+.error {
+  text-align: center;
+  padding: 2rem;
+  color: #d9534f;
+  font-size: 1.2rem;
+}
+
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;

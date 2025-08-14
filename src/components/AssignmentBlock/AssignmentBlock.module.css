@@ -1,0 +1,171 @@
+.assignmentBlock {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(58, 68, 84, 0.1);
+  margin-bottom: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--dusk-blue);
+}
+
+.title {
+  font-size: 1.5rem;
+  color: var(--deep-slate);
+  margin: 0;
+}
+
+.status {
+  background: rgba(249, 199, 79, 0.15);
+  color: #d4a418;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.description {
+  color: var(--dusk-blue);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--vintage-plum);
+  margin-bottom: 1rem;
+}
+
+.requirementList {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.requirementItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.8rem;
+  color: var(--dusk-blue);
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--ash-lavender);
+  border-radius: 4px;
+  margin-right: 0.8rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.hint {
+  display: flex;
+  background: rgba(67, 97, 238, 0.05);
+  border-left: 4px solid var(--electric-blue);
+  padding: 1.2rem;
+  border-radius: 0 8px 8px 0;
+  margin: 1.5rem 0;
+}
+
+.hintIcon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: var(--dusk-blue);
+}
+
+.hintText {
+  color: var(--dusk-blue);
+}
+
+.answerForm {
+  margin-top: 1.5rem;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  color: var(--deep-slate);
+}
+
+.answerInput {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--ash-lavender);
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  min-height: 200px;
+  resize: vertical;
+  margin-bottom: 1.5rem;
+}
+
+.answerInput:focus {
+  outline: none;
+  border-color: var(--vintage-plum);
+  box-shadow: 0 0 0 2px rgba(107, 78, 113, 0.1);
+}
+
+.formActions {
+  display: flex;
+  gap: 1rem;
+}
+
+.saveButton {
+  padding: 0.8rem 1.5rem;
+  background: white;
+  border: 2px solid var(--ash-lavender);
+  color: var(--dusk-blue);
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.saveButton:hover {
+  border-color: var(--vintage-plum);
+  color: var(--vintage-plum);
+}
+
+.submitButton {
+  padding: 0.8rem 1.5rem;
+  background: var(--vintage-plum);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+  background: var(--dusk-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(107, 78, 113, 0.3);
+}
+
+.submissionStatus {
+  display: flex;
+  align-items: center;
+  background: rgba(67, 160, 71, 0.1);
+  color: #2e7d32;
+  padding: 1.2rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+}
+
+.successIcon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.successMessage {
+  font-weight: 500;
+}
