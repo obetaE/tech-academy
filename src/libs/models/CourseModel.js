@@ -1,4 +1,5 @@
 import mongoose, { Schema } from "mongoose"; 
+import { models } from "mongoose";
 
 const topicSchema = new Schema({
   title: {
